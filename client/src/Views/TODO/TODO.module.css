@@ -1,6 +1,6 @@
 .ancestorContainer {
     display: flex;
-    background-color: whitesmoke;
+    background-color: rgb(247, 248, 249);
     padding: 8px;
     border-radius: 8px;
     height: 80vh;
@@ -21,56 +21,58 @@
     height: fit-content;
     width: fit-content;
     padding: 12px 8px;
-    background-color: floralwhite;
+    background-color: rgb(252, 254, 251);
     cursor: pointer;
     border-radius: 8px;
     font-size: large;
     font-weight: 700;
     transition: all 0.3s linear;
-    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 4px 2px rgba(19, 19, 19, 0.1);
+}
 
-    &:hover {
-        box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.4);
-    }
+.addButton:hover {
+    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.4);
 }
 
 .todoContainer {
     display: flex;
     flex-direction: column;
-    height: 80%;
-    background-color: rgb(0, 0, 0);
+    height: fit-content;
+    background-color: rgb(252, 251, 252);
     margin: 4px;
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 8px;
     gap: 12px;
-    border-radius: 8px;
     overflow-y: auto;
 }
 
-
 .todo {
     background-color: white;
-
-    padding: 8px;
+    padding: 16px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.1);
-    justify-content: space-between;
-    max-height: 2em;
+    max-height: fit-content;
+    width: 97%;
+}
 
-    input {
-        margin-right: 8px;
-        height: 20px;
-        width: 20px;
-    }
+.todo input[type="checkbox"] {
+    margin-right: 8px;
+    height: 20px;
+    width: 20px;
 }
 
 .infoContainer {
-    width: 90%;
+    width: 100%;
     font-size: x-large;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.infoContainer p {
+    margin: 5px 0;
+    font-size: medium;
 }
 
 .todoInput {
@@ -81,7 +83,7 @@
 }
 
 .noTodoMessage {
-    color: white;
+    color: rgb(7, 7, 7);
     align-self: center;
     justify-self: center;
     font-size: large;
